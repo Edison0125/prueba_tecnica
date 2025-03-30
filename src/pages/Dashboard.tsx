@@ -1,3 +1,5 @@
+import TaskCard from "../components/TaskCard.tsx";
+
 const Dashboard = () => {
     return (
         <div className="min-h-screen bg-gray-50 flex flex-col">
@@ -50,7 +52,7 @@ const Dashboard = () => {
 
                 {/* Contenido principal */}
                 <div className="flex-1 p-6 bg-gray-100">
-                    Aquí va el contenido principal
+                    <TaskCard />
                 </div>
             </div>
         </div>
