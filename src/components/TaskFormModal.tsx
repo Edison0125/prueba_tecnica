@@ -33,8 +33,8 @@ const TaskFormModal: React.FC<TaskModalProps> = ({ isOpen, onClose }) => {
 
                 {/* Botones */}
                 <div className="flex justify-end space-x-2">
-                    <button onClick={onClose} className="text-white bg-red-800 font-medium text-sm rounded-md pt-1 pb-1 pl-3 pr-3">Cancelar</button>
-                    <button className="text-white bg-blue-700 font-medium text-sm rounded-md pt-1 pb-1 pl-3 pr-3 mr-3">Guardar</button>
+                    <button onClick={onClose} className="text-white bg-red-800 hover:bg-red-900 font-medium text-sm rounded-md pt-1 pb-1 pl-3 pr-3">Cancelar</button>
+                    <button className="text-white bg-blue-700 hover:bg-blue-800 font-medium text-sm rounded-md pt-1 pb-1 pl-3 pr-3 mr-3">Guardar</button>
                 </div>
             </div>
         </div>
