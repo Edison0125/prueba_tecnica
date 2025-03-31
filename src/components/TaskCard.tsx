@@ -29,8 +29,8 @@ const TaskCard = () => {
                     <label htmlFor="" className="ml-3  text-gray-700">Finalizada</label>
                 </div>
                 <div className="">
-                    <button onClick={() => setIsModalOpenTaskModal(true)} className="text-white bg-blue-700 font-medium text-sm rounded-md pt-1 pb-1 pl-3 pr-3 mr-3">Editar</button>
-                    <button onClick={() => setIsModalOpenTaskDeleteModal(true)} className="text-white bg-red-800 font-medium text-sm rounded-md pt-1 pb-1 pl-3 pr-3">Eliminar</button>
+                    <button onClick={() => setIsModalOpenTaskModal(true)} className="text-white bg-blue-700  hover:bg-blue-800 font-medium text-sm rounded-md pt-1 pb-1 pl-3 pr-3 mr-3">Editar</button>
+                    <button onClick={() => setIsModalOpenTaskDeleteModal(true)} className="text-white bg-red-800 hover:bg-red-900 font-medium text-sm rounded-md pt-1 pb-1 pl-3 pr-3">Eliminar</button>
                     <TaskFormModal isOpen={isModalOpenTaskModal} onClose={() => setIsModalOpenTaskModal(false)} />
                     <DeleteTaskFormModal isOpen={isModalOpenDeleteModal} onClose={() => setIsModalOpenTaskDeleteModal(false)} />
                 </div>
