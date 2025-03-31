@@ -1,4 +1,11 @@
+import { useState } from "react";
+import TaskFormModal from "../components/TaskFormModal.tsx";
+import DeleteTaskFormModal from "../components/DeleteTaskModal.tsx";
+
 const TaskCard = () => {
+    const [isModalOpenTaskModal, setIsModalOpenTaskModal] = useState(false);
+    const [isModalOpenDeleteModal, setIsModalOpenTaskDeleteModal] = useState(false);
+
     return (
         <div className="max-w-md p-4 bg-white rounded-md shadow-md space-y-5 max-h-[300px] overflow-auto">
             {/* Parte superior de la card */}
@@ -10,8 +17,6 @@ const TaskCard = () => {
             <div>
                 <p className="text-gray-600 text-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum tristique lectus at luctus. Duis quis auctor nulla
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum tristique lectus at luctus. Duis quis auctor nulla..</p>
-
-
             </div>
             {/* Espacio de la fecha */}
             <div className="space-y-5">
@@ -24,8 +29,10 @@ const TaskCard = () => {
                     <label htmlFor="" className="ml-3  text-gray-700">Finalizada</label>
                 </div>
                 <div className="">
-                    <button className="text-white bg-blue-700 font-medium text-sm rounded-md pt-1 pb-1 pl-3 pr-3 mr-3">Editar</button>
-                    <button className="text-white bg-red-800 font-medium text-sm rounded-md pt-1 pb-1 pl-3 pr-3">Eliminar</button>
+                    <button onClick={() => setIsModalOpenTaskModal(true)} className="text-white bg-blue-700 font-medium text-sm rounded-md pt-1 pb-1 pl-3 pr-3 mr-3">Editar</button>
+                    <button onClick={() => setIsModalOpenTaskDeleteModal(true)} className="text-white bg-red-800 font-medium text-sm rounded-md pt-1 pb-1 pl-3 pr-3">Eliminar</button>
+                    <TaskFormModal isOpen={isModalOpenTaskModal} onClose={() => setIsModalOpenTaskModal(false)} />
+                    <DeleteTaskFormModal isOpen={isModalOpenDeleteModal} onClose={() => setIsModalOpenTaskDeleteModal(false)} />
                 </div>
             </div>
         </div>
